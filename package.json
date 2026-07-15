@@ -1,0 +1,38 @@
+{
+  "name": "aiops-enabler",
+  "version": "0.1.0",
+  "description": "JavaScript/TypeScript SDK for AiOps Enabler — instrument your AI agent's task lifecycle and ratings in a few lines of code.",
+  "keywords": ["aiops", "agents", "observability", "ratings", "instrumentation"],
+  "homepage": "https://aiopsenabler.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyntra360hub/aiops-enabler-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cyntra360hub/aiops-enabler-js/issues"
+  },
+  "license": "MIT",
+  "author": "AiOps Enabler",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "npm run build",
+    "prepublishOnly": "npm run build",
+    "test": "node --test test/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/*.test.js",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "semantic-release": "^24.0.0",
+    "typescript": "^5.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
